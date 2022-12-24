@@ -11,7 +11,10 @@ import { ProductCard } from '../../components';
 
 export default function Products({ products, categories }) {
   const router = useRouter();
-  const editedCategories = [{ name: 'All Products' }, ...categories]; // add 'All Products' to the categories array for the dropdown menu
+  const editedCategories = [
+    { name: 'All Products', slug: 'All Products' },
+    ...categories,
+  ]; // add 'All Products' to the categories array for the dropdown menu
   const [selectedCategory, setSelectedCategory] = useState('All Products');
   const [selectedFilter, setSelectedFilter] = useState('');
 
@@ -62,8 +65,8 @@ export default function Products({ products, categories }) {
               >
                 {editedCategories.map((category) => (
                   <option
-                    key={category.name}
-                    value={category.name}
+                    key={category.slug}
+                    value={category.slug}
                     className="w-[300px] text-sm text-custom"
                   >
                     {category.name}
