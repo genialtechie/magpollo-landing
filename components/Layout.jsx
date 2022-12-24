@@ -33,7 +33,9 @@ const Layout = ({ children }) => {
         />
       </Head>
       <Navbar />
-      <main className={`${unbounded.variable} font-serif overflow-hidden`}>
+      <main
+        className={`${unbounded.variable} font-serif overflow-hidden bg-theme`}
+      >
         {children}
         <Cart />
       </main>
