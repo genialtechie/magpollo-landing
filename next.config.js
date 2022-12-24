@@ -1,7 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
-}
+  images: {
+    domains: ['localhost', 'res.cloudinary.com'],
+  },
+  experimental: {
+    fontLoaders: [
+      {
+        loader: '@next/font/google',
+        options: { display: 'swap', subsets: ['latin'] },
+      },
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

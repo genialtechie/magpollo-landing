@@ -1,6 +1,9 @@
 {
   "name": "african-delicacies",
   "version": "0.1.0",
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,12 +12,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^13.1.0",
+    "@prisma/client": "^4.8.0",
+    "js-cookie": "^3.0.1",
     "next": "13.0.7",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
     "eslint": "8.30.0",
-    "eslint-config-next": "13.0.7"
+    "eslint-config-next": "13.0.7",
+    "postcss": "^8.4.20",
+    "prisma": "^4.8.0",
+    "tailwindcss": "^3.2.4"
   }
 }
