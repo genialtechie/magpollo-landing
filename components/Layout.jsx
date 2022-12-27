@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
         {children}
         <Cart />
       </main>
-      <Footer />
+      <Footer className={`${unbounded.variable} font-serif`} />
     </>
   );
 };
