@@ -26,6 +26,16 @@ a {
   display: none;
 }
 
+.custom-input::-webkit-outer-spin-button,
+.custom-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: light;

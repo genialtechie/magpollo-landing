@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 const QtyInput = ({ min, max, label, value, setValue, className }) => {
   const handledecrement = (e) => {
     e.preventDefault();
@@ -27,9 +25,11 @@ const QtyInput = ({ min, max, label, value, setValue, className }) => {
         </button>
         <input
           type="number"
-          className="focus:outline-none border-0 focus:ring-0 text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+          className="focus:outline-none custom-input border-0 focus:ring-0 text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
           name="custom-input-number"
           value={value}
+          min={min}
+          max={max}
           onChange={(e) => setValue(e.target.value)}
         />
         <button

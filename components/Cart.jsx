@@ -7,7 +7,7 @@ export default function Cart() {
   const { state, dispatch, cartOpen, setCartOpen } = useCart();
 
   async function handleCheckout() {
-    const response = await fetch('/api/checkout_sessions', {
+    const response = await fetch('/api/checkout_session', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
