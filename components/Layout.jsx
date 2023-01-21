@@ -1,27 +1,20 @@
 import React from 'react';
-import Navbar from './Navbar';
+import Header from './Header';
 import Footer from './Footer';
 import Head from 'next/head';
-import { Unbounded } from '@next/font/google';
-import Cart from './Cart';
-
-const unbounded = Unbounded({
-  weight: '400',
-  variable: '--font-unb',
-});
 
 const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>The African Soul Food Restaurant</title>
+        <title>Magpollo</title>
         <meta
           name="description"
-          content="Celebrate the flavors of Africa with every bite of our delicious meals."
+          content="E-Strategy, Design & Engineering"
         />
         <meta
           name="keywords"
-          content="African, Soul, Food, Restaurant, African Food, Soul Food, African Restaurant, Soul Food Restaurant, African Cuisine"
+          content="Web Design, Web Development, Blockchain, SEO, API Integration, Social Media Marketing, Branding, E-commerce, CMS, Software Development"
         />
         <meta
           name="viewport"
@@ -32,14 +25,9 @@ const Layout = ({ children }) => {
           href="/favicon.ico"
         />
       </Head>
-      <Navbar />
-      <main
-        className={`${unbounded.variable} font-serif overflow-hidden bg-theme`}
-      >
-        {children}
-        <Cart />
-      </main>
-      <Footer className={`${unbounded.variable} font-serif`} />
+      <Header />
+      <main>{children}</main>
+      <Footer />
     </>
   );
 };

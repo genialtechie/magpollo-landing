@@ -12,9 +12,9 @@ module.exports = {
         serif: ['var(--font-unb)', ...fontFamily.serif],
       },
       colors: {
-        theme: '#fcf6ee',
-        orange: '#eb4511',
-        custom: '#432818',
+        cream: '#FFFCE4',
+        red: '#CE4257',
+        black: '#040F0F',
       },
     },
   },
