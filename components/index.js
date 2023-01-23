@@ -8,3 +8,4 @@ export { default as Twitter } from './svgs/Twitter';
 export { default as Instagram } from './svgs/Instagram';
 export { default as Close } from './svgs/Close';
 export { default as Button } from './ui/Button';
+export { default as SmallCard } from './ui/SmallCard';
