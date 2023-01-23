@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['var(--font-unb)', ...fontFamily.serif],
+        sans: ['var(--font-jakarta)', ...fontFamily.sans],
+        mono: ['var(--font-hack)', ...fontFamily.mono],
       },
       colors: {
         cream: '#FFFCE4',
