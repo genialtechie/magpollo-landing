@@ -11,7 +11,7 @@ const Homepage = () => {
             Digital <br /> excellence
           </span>
         </h1>
-        <p className="text-center text-black lg:mb-8">
+        <p className="text-center font-sans text-black lg:mb-8">
           The key to elevating your digital game and standing out
         </p>
         <Button className="mx-auto">Let&apos;s Build</Button>
