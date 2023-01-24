@@ -3,24 +3,30 @@ import { Button, SmallCard } from '../components';
 const Homepage = () => {
   return (
     <div className="bg-cream h-full w-full overflow-hidden">
-      <div className="lg:w-1/3 mx-auto py-20">
-        <h1 className="text-6xl uppercase font-bold text-center lg:mb-8 leading-tight">
+      <div className="lg:w-1/3 mx-auto py-20 px-5 lg:px-0">
+        <h1 className="lg:text-6xl text-5xl uppercase font-bold text-center mb-8 leading-snug lg:leading-tight">
           <span className="text-black">Ascend to</span>
           <br />
           <span className="text-red">
             Digital <br /> excellence
           </span>
         </h1>
-        <p className="text-center font-sans text-black lg:mb-8">
+        <p className="text-center font-sans text-black mb-8 px-">
           The key to elevating your digital game and standing out
         </p>
         <Button className="mx-auto">Let&apos;s Build</Button>
       </div>
-      <div className="w-full h-fit grid lg:grid-cols-4 lg:grid-rows-1 gap-3 mb-24">
+      <div className="mx-auto w-full h-fit grid grid-cols-2 lg:grid-cols-4 grid-rows-1 gap-5 mb-24 overflow-hidden">
+        <SmallCard
+          className="hidden lg:block"
+          image="https://via.placeholder.com/400x475.png?text=Image+Placeholder"
+        />
         <SmallCard image="https://via.placeholder.com/400x475.png?text=Image+Placeholder" />
         <SmallCard image="https://via.placeholder.com/400x475.png?text=Image+Placeholder" />
-        <SmallCard image="https://via.placeholder.com/400x475.png?text=Image+Placeholder" />
-        <SmallCard image="https://via.placeholder.com/400x475.png?text=Image+Placeholder" />
+        <SmallCard
+          className="hidden lg:block"
+          image="https://via.placeholder.com/400x475.png?text=Image+Placeholder"
+        />
       </div>
     </div>
   );
