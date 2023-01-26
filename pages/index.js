@@ -1,9 +1,11 @@
-import { Homepage } from '../components';
+import { Homepage, Partners, HowItWorks } from '../components';
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Homepage />
+      <Partners />
+      <HowItWorks />
     </div>
   );
 }

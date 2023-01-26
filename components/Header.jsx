@@ -4,7 +4,7 @@ import { MobileNav } from '../components';
 
 const Header = () => {
   return (
-    <nav>
+    <nav className="w-full">
       <div className="bg-cream text-lg flex flex-row justify-between items-center py-10 px-10 relative">
         <span className="h-fit">
           <MobileNav />

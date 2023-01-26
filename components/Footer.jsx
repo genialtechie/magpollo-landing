@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Twitter, Instagram } from '../components';
 
 const Footer = ({ className }) => {
   return (
@@ -7,30 +6,23 @@ const Footer = ({ className }) => {
       className={
         className +
         ' ' +
-        `font-sans w-full py-10 lg:py-16 h-fit bg-black text-white flex flex-col lg:flex-row justify-around text-sm`
+        `font-sans w-full py-10 px-10 lg:py-16 h-fit bg-black text-white flex flex-col lg:flex-row justify-around text-sm`
       }
     >
-      <div className="w-fit mx-auto lg:mx-0 mb-10">
+      <div className="w-fit mb-10">
         <Image
           src="/logo-dark.png"
           alt="logo"
           width={150}
           height={50}
-          className="cursor-pointer scale-125 mb-7 mx-auto lg:mx-0"
+          className="cursor-pointer mb-7"
         />
-        <div className="flex flex-row h-fit w-fit mb-7">
-          <Twitter className="lg:scale-150 fill-white hover:fill-red cursor-pointer transition duration-300 ease-in-out mr-4 lg:mr-7" />
-          <Instagram className="lg:scale-150 fill-white hover:fill-red cursor-pointer transition duration-300 ease-in-out" />
-        </div>
-        <p className="text-center lg:text-left">
-          Magpollo is headquartered in Atlanta, GA, USA
-        </p>
+        <p className="mb-3">Magpollo is headquartered in Atlanta, GA, USA</p>
+        <p>&copy; Magpollo 2023</p>
       </div>
       <div className="grid grid-cols-1 auto-cols-max lg:grid-rows-1 lg:grid-cols-3 gap-y-10 lg:gap-5">
-        <div className="text-center lg:text-left">
-          <div className="mx-auto lg:mx-0 w-fit text-gray-400 mb-3">
-            Find Us
-          </div>
+        <div>
+          <div className="w-fit text-gray-400 mb-3">Find Us</div>
           <ul className="mb-2">
             <li className="mb-1">
               <a
@@ -66,10 +58,8 @@ const Footer = ({ className }) => {
             </li>
           </ul>
         </div>
-        <div className="text-center lg:text-left">
-          <div className="mx-auto lg:mx-0 w-fit text-gray-400 mb-3">
-            Quick Links
-          </div>
+        <div>
+          <div className="w-fit text-gray-400 mb-3">Quick Links</div>
           <ul className="mb-2">
             <li className="mb-1">
               <a
@@ -113,10 +103,8 @@ const Footer = ({ className }) => {
             </li>
           </ul>
         </div>
-        <div className="text-center lg:text-left">
-          <div className="mx-auto lg:mx-0 w-fit text-gray-400 mb-3">
-            Support
-          </div>
+        <div>
+          <div className="w-fit text-gray-400 mb-3">Support</div>
           <p className="mb-2">
             <a
               className="transition-all cursor-pointer duration-300 hover:text-red"
