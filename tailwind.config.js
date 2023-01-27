@@ -19,6 +19,9 @@ module.exports = {
         darkRed:'#B93B4E',
         lightBlue: '#EEF6FF'
       },
+      content: {
+        quote: 'url("../public/quote.svg")',
+      },
     },
   },
   plugins: [],
