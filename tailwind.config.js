@@ -17,7 +17,8 @@ module.exports = {
         red: '#CE4257',
         black: '#040F0F',
         darkRed:'#B93B4E',
-        lightBlue: '#EEF6FF'
+        lightBlue: '#EEF6FF',
+        white:'#fff'
       },
       content: {
         quote: 'url("../public/quote.svg")',

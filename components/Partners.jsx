@@ -3,10 +3,9 @@ import Marquee from "react-fast-marquee";
 import {Abel, GoMoney, Heroshe, Loudr, Nebula, Refinable, Solarsoft, Sp, Zoone } from "../components" 
 
 const Partners = () => {
-  return <div>
-    <Marquee speed={200} gradient={false}>
-      <div className="flex w-full justify-between items-center h-40 bg-black" >
-        <Refinable/>
+  return <div className='bg-black'>
+    <Marquee speed={200} gradient={false} >
+      <div className="flex w-full justify-around items-center h-40 px-300" >
         <Abel/>
         <GoMoney/>
         <Heroshe/>
@@ -14,7 +13,6 @@ const Partners = () => {
         <Nebula/>
         <Solarsoft/>
         <Sp/>
-        <Zoone/>
       </div>
   </Marquee>
   </div>;
