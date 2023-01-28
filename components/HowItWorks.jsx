@@ -1,5 +1,6 @@
 import React from 'react';
-import { PenOnPaper, Design, Growth } from '../components';
+import { Notepad, Pendraw, Growth } from '../components';
+import LottieAnimation from '../components/ui/LottieAnimation';
 
 const HowItWorks = () => {
   return (
@@ -19,22 +20,24 @@ const HowItWorks = () => {
         </p>
         <div className="w-fit mx-auto grid grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 gap-8 lg:gap-28 auto-cols-min mb-28">
           <div className="flex flex-col items-center w-80">
-            <PenOnPaper className="fill-black" />
-            <p className="font-sans text-center mt-5">
-              Our team is ready and eager to hear about your unique needs
+          <LottieAnimation animationData={Notepad} />
+            <p className="font-sans text-center">
+              With our cutting-edge designs, you&apos;ll be sure to elevate your
+              online presence and dominate your competition.
             </p>
           </div>
           <div className="flex flex-col items-center w-80">
-            <Design className="fill-black" />
-            <p className="font-sans text-center mt-5">
-              Collaborative design process, iterating to perfection, exceeding
-              expectations.
+          <LottieAnimation animationData={Pendraw} />
+            <p className="font-sans text-center">
+              With our cutting-edge designs, you&apos;ll be sure to elevate your
+              online presence and dominate your competition.
             </p>
           </div>
           <div className="flex flex-col items-center w-80">
-            <Growth className="fill-black" />
-            <p className="font-sans text-center mt-5">
-              Expertise and support for business growth and maintenance.
+          <LottieAnimation animationData={Growth} />
+            <p className="font-sans text-center">
+              With our cutting-edge designs, you&apos;ll be sure to elevate your
+              online presence and dominate your competition.
             </p>
           </div>
         </div>
