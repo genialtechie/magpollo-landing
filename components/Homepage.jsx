@@ -14,7 +14,12 @@ const Homepage = () => {
         <p className="text-center font-sans text-black mb-8 px-">
           The key to elevating your digital game and standing out
         </p>
-        <Button className="mx-auto">Let&apos;s Build</Button>
+        <Button
+          href="/contact"
+          className="mx-auto"
+        >
+          Let&apos;s Build
+        </Button>
       </div>
       <div className="mx-auto w-full h-fit grid grid-cols-2 lg:grid-cols-4 grid-rows-1 gap-5 mb-24 overflow-hidden">
         <SmallCard
