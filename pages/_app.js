@@ -12,11 +12,10 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 function MyApp({ Component, pageProps }) {
+  const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>);
   return (
     <div className={`${jakarta.variable} font-sans ${hack.variable} font-mono`}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      {getLayout(<Component {...pageProps} />)}
     </div>
   );
 }
