@@ -25,7 +25,7 @@ const Homepage = () => {
           className="hidden lg:block"
           image={archivo}
         />
-        <SmallCard className="hidden lg:block" image={loudr} />
+        <SmallCard image={loudr} />
         <SmallCard image={refinable} />
         <SmallCard
           className="hidden lg:block"
