@@ -1,4 +1,8 @@
 import { Button, SmallCard } from '../components';
+import archivo  from "../assets/img/archivo.png";
+import loudr  from "../assets/img/loudr.png";
+import refinable  from "../assets/img/refinable.png";
+import mma  from "../assets/img/mma.png";
 
 const Homepage = () => {
   return (
@@ -19,13 +23,13 @@ const Homepage = () => {
       <div className="mx-auto w-full h-fit grid grid-cols-2 lg:grid-cols-4 grid-rows-1 gap-5 mb-24 overflow-hidden">
         <SmallCard
           className="hidden lg:block"
-          image="https://via.placeholder.com/400x475.png?text=Image+Placeholder"
+          image={archivo}
         />
-        <SmallCard image="https://via.placeholder.com/400x475.png?text=Image+Placeholder" />
-        <SmallCard image="https://via.placeholder.com/400x475.png?text=Image+Placeholder" />
+        <SmallCard className="hidden lg:block" image={loudr} />
+        <SmallCard image={refinable} />
         <SmallCard
           className="hidden lg:block"
-          image="https://via.placeholder.com/400x475.png?text=Image+Placeholder"
+          image={mma}
         />
       </div>
     </div>

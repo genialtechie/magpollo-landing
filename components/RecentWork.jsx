@@ -1,5 +1,9 @@
 import React from "react";
-import { Button, SmallCard } from '../components';
+import { SmallCard } from '../components';
+import restaurant  from "../assets/img/restaurant.png";
+import dooshima  from "../assets/img/dooshima.png";
+import nebula  from "../assets/img/nebula.png";
+import lego  from "../assets/img/lego.png";
 
 const RecentWork = () => {
     return (
@@ -9,10 +13,10 @@ const RecentWork = () => {
             The key to elevating your digital game and standing out
         </p>
         <div className="h-fit w-fit grid lg:grid-cols-2 sm:grid-cols-1 gap-10 mt-6 content-around mx-auto">
-            <SmallCard image="https://via.placeholder.com/400x475.png?text=Image+Placeholder" />
-            <SmallCard image="https://via.placeholder.com/400x475.png?text=Image+Placeholder" />
-            <SmallCard image="https://via.placeholder.com/400x475.png?text=Image+Placeholder" />
-            <SmallCard image="https://via.placeholder.com/400x475.png?text=Image+Placeholder" />
+            <SmallCard image={restaurant} />
+            <SmallCard image={dooshima} />
+            <SmallCard image={nebula} />
+            <SmallCard image={lego} />
         </div>
         </div>
     );
