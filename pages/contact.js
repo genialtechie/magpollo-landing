@@ -1,11 +1,7 @@
-import { LetsBuild, LetsBuildForm, LetsBuildLayout } from '../components';
+import { LetsBuild, LetsBuildLayout } from '../components';
 
 export default function Contact() {
-  return (
-    <div className="overflow-hidden">
-      <LetsBuild />
-    </div>
-  );
+  return <LetsBuild />;
 }
 
 Contact.getLayout = (page) => {

@@ -4,7 +4,7 @@ const ServicesCard = ({ children }) => {
   const [clicked, setClicked] = useState(false);
   return (
     <span
-      className={` mr-4 mb-4 cursor-pointer w-fit p-4 rounded-md ${
+      className={`inline-block mr-4 mb-4 cursor-pointer w-fit p-4 rounded-md ${
         clicked ? 'border border-[#B80C09] bg-white' : 'bg-[#EDEDF2]'
       }`}
       onClick={() => setClicked(!clicked)}
