@@ -25,6 +25,7 @@ export { default as Pendraw }  from '../assets/lottieAnimations/pendraw';
 export { default as Growth }  from '../assets/lottieAnimations/growth';
 export { default as Target }  from '../assets/lottieAnimations/target';
 export { default as Lightbulb }  from '../assets/lottieAnimations/lightbulb';
+export { default as Contact }  from '../assets/lottieAnimations/contact';
 export { default as Abel } from './svgs/Abel';
 export { default as GoMoney } from './svgs/GoMoney';
 export { default as Heroshe } from './svgs/Heroshe';

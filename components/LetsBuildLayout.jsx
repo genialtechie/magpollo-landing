@@ -3,6 +3,8 @@ import Footer from './Footer';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Contact } from '../components';
+import LottieAnimation from '../components/ui/LottieAnimation'
 
 const LetsBuildLayout = ({ children }) => {
   return (
@@ -26,7 +28,7 @@ const LetsBuildLayout = ({ children }) => {
           href="/favicon.ico"
         />
       </Head>
-      <nav className="w-full bg-white text-lg flex flex-row justify-center items-center py-10">
+      <nav className="w-full bg-white text-lg flex flex-row items-center py-10 ">
         <Link href="/">
           <Image
             src="/logo-light.svg"
@@ -38,7 +40,7 @@ const LetsBuildLayout = ({ children }) => {
         </Link>
       </nav>
       <main>{children}</main>
-      <div className="bg-red py-20 w-full h-fit flex lg:flex-row items-center lg:justify-around">
+      <div className="bg-red p-20 grid md:grid-cols-2 mx-auto ">
         <div className="font-sans text-white">
           <h1 className="text-2xl font-bold mb-3">
             Don&apos;t want to fill a form?
@@ -59,6 +61,9 @@ const LetsBuildLayout = ({ children }) => {
               +1 (470) 549-2477
             </a>
           </p>
+        </div>
+        <div className="font-sans">
+        <LottieAnimation animationData={Contact} size={200}/>
         </div>
       </div>
       <Footer />

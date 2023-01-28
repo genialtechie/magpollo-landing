@@ -1,5 +1,5 @@
 import React from "react";
-import { Lightbulb, Target, Button } from '../components';
+import { Lightbulb, Target, Button, Contact } from '../components';
 import LottieAnimation from '../components/ui/LottieAnimation'
 
 const GetStarted = () => {
@@ -12,11 +12,11 @@ const GetStarted = () => {
 
             <div className="flex flex-row gap-5  place-content-center mt-6 mx-100 align-center whitespace-normal">
             <div className="bg-darkRed w-25 h-56 align-middle ">
-            <LottieAnimation animationData={Lightbulb} />
+            <LottieAnimation animationData={Lightbulb} size={126} />
                 <p className="font-thin px-6 mt-6"> Let us know  you and your digital needs</p>
             </div>
             <div className="bg-darkRed w-25 h-56 align-middle">
-            <LottieAnimation animationData={Target} />
+            <LottieAnimation animationData={Target}  size={126} />
                 <p className="font-thin px-6 mt-6">We&apos;ll work with you  to reach your targets.</p>
             </div>
 
