@@ -1,14 +1,14 @@
 import { Button, SmallCard } from '../components';
-import archivo  from "../assets/img/archivo.png";
-import loudr  from "../assets/img/loudr.png";
-import refinable  from "../assets/img/refinable.png";
-import mma  from "../assets/img/mma.png";
+import archivo from '../assets/img/archivo.png';
+import loudr from '../assets/img/loudr.png';
+import refinable from '../assets/img/refinable.png';
+import mma from '../assets/img/mma.png';
 
 const Homepage = () => {
   return (
     <div className="bg-cream h-full w-full overflow-hidden">
       <div className="lg:w-1/3 mx-auto py-20 px-5 lg:px-0">
-        <h1 className="lg:text-6xl text-5xl uppercase font-bold text-center mb-8 leading-snug lg:leading-tight">
+        <h1 className="lg:text-6xl text-5xl uppercase font-bold font-mono text-center mb-8 leading-snug lg:leading-tight">
           <span className="text-black">Ascend to</span>
           <br />
           <span className="text-red">
@@ -19,7 +19,7 @@ const Homepage = () => {
           The key to elevating your digital game and standing out
         </p>
         <Button
-          href="/contact"
+          href="/lets-build"
           className="mx-auto"
         >
           Let&apos;s Build

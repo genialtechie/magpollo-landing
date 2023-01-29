@@ -1,4 +1,4 @@
-const Button = ({ children, className, href }) => {
+const ButtonDisabled = ({ children, className, href }) => {
   return (
     <div
       className={
@@ -23,4 +23,4 @@ const Button = ({ children, className, href }) => {
   );
 };
 
-export default Button;
+export default ButtonDisabled;

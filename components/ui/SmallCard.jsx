@@ -6,9 +6,9 @@ const SmallCard = ({ image, className }) => {
       <Image
         src={image}
         alt="small-card"
-        width={400}
-        height={475}
-        className="object-cover object-center rounded-md hover:scale-110 transition-all duration-300 ease-in-out"
+        width={384}
+        height={384}
+        className="h-96 w-96 object-cover object-center rounded-md hover:scale-110 transition-all duration-300 ease-in-out"
       />
     </div>
   );
