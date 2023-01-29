@@ -1,10 +1,4 @@
-import {
-  Homepage,
-  GetStarted,
-  RecentWork,
-  Partners,
-  HowItWorks,
-} from '../components';
+import { Homepage, GetStarted, RecentWork, Partners, HowItWorks, Scope } from '../components';
 
 export default function Home() {
   return (
@@ -13,6 +7,7 @@ export default function Home() {
       <Partners />
       <HowItWorks />
       <RecentWork />
+      <Scope />
       <GetStarted />
     </div>
   );
