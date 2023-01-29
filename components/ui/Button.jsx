@@ -1,9 +1,11 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
-const Button = ({ children, className, href }) => {
+const Button = ({ children, className, href, onClick }) => {
   return (
-    <Link href={href || ''}>
+    <Link
+      href={href || ''}
+      onClick={onClick}
+    >
       <div className={className + ' ' + 'relative w-fit h-fit group'}>
         <svg
           className="object-cover w-full h-full fill-black group-hover:scale-x-105 group-hover:fill-red transition-all duration-300 ease-in-out"
