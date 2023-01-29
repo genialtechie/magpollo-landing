@@ -4,7 +4,7 @@ import {Abel, GoMoney, Heroshe, Loudr, Nebula, Refinable, Solarsoft, Sp, Zoone }
 
 const Partners = () => {
   return <div className='bg-black'>
-    <Marquee speed={200} gradient={false} >
+    <Marquee speed={150} gradient={false} >
       <div className="flex w-full justify-around items-center h-40 px-300" >
         <Abel/>
         <GoMoney/>

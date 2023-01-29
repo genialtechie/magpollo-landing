@@ -20,21 +20,21 @@ const HowItWorks = () => {
         </p>
         <div className="w-fit mx-auto grid grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 gap-8 lg:gap-28 auto-cols-min mb-28">
           <div className="flex flex-col items-center w-80">
-          <LottieAnimation animationData={Notepad} />
+          <LottieAnimation animationData={Notepad} size={126} />
             <p className="font-sans text-center">
               With our cutting-edge designs, you&apos;ll be sure to elevate your
               online presence and dominate your competition.
             </p>
           </div>
           <div className="flex flex-col items-center w-80">
-          <LottieAnimation animationData={Pendraw} />
+          <LottieAnimation animationData={Pendraw} size={126} />
             <p className="font-sans text-center">
               With our cutting-edge designs, you&apos;ll be sure to elevate your
               online presence and dominate your competition.
             </p>
           </div>
           <div className="flex flex-col items-center w-80">
-          <LottieAnimation animationData={Growth} />
+          <LottieAnimation animationData={Growth} size={126} />
             <p className="font-sans text-center">
               With our cutting-edge designs, you&apos;ll be sure to elevate your
               online presence and dominate your competition.
