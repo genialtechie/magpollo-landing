@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Contact } from '../components';
-import LottieAnimation from '../components/ui/LottieAnimation'
+import LottieAnimation from '../components/ui/LottieAnimation';
 
 const LetsBuildLayout = ({ children }) => {
   return (
@@ -28,19 +28,19 @@ const LetsBuildLayout = ({ children }) => {
           href="/favicon.ico"
         />
       </Head>
-      <nav className="w-full bg-white text-lg flex flex-row items-center py-10 ">
+      <nav className="w-full bg-white text-lg flex flex-row items-center justify-center py-10 ">
         <Link href="/">
           <Image
             src="/logo-light.svg"
             alt="logo"
             width={150}
             height={50}
-            className="cursor-pointer scale-125"
+            className="cursor-pointer scale-125 mx-auto"
           />
         </Link>
       </nav>
       <main>{children}</main>
-      <div className="bg-red p-20 grid md:grid-cols-2 mx-auto ">
+      <div className="bg-red p-20 flex flex-row justify-around mx-auto ">
         <div className="font-sans text-white">
           <h1 className="text-2xl font-bold mb-3">
             Don&apos;t want to fill a form?
@@ -63,7 +63,10 @@ const LetsBuildLayout = ({ children }) => {
           </p>
         </div>
         <div className="font-sans">
-        <LottieAnimation animationData={Contact} size={200}/>
+          <LottieAnimation
+            animationData={Contact}
+            size={200}
+          />
         </div>
       </div>
       <Footer />

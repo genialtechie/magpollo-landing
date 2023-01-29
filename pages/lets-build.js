@@ -1,14 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
   ServicesCard,
   DragNDrop,
   ButtonDisabled,
   Button,
   LetsBuildForm,
+  LetsBuildLayout,
 } from '../components';
 import { services } from '../utils/services';
 
-const LetsBuild = () => {
+export default function LetsBuild() {
   const [selectedServices, setSelectedServices] = useState([]);
   const [file, setFile] = useState(null);
   const [showForm, setShowForm] = useState(false);
@@ -80,9 +81,17 @@ const LetsBuild = () => {
         )}
       </div>
 
-      {showForm && <LetsBuildForm hide={handlePageToggle} />}
+      {showForm && (
+        <LetsBuildForm
+          services={selectedServices}
+          file={file}
+          hide={handlePageToggle}
+        />
+      )}
     </>
   );
-};
+}
 
-export default LetsBuild;
+LetsBuild.getLayout = (page) => {
+  return <LetsBuildLayout>{page}</LetsBuildLayout>;
+};

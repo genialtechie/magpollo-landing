@@ -6,7 +6,7 @@ const HowItWorks = () => {
   return (
     <div className="bg-white w-full h-full">
       <div className="py-20 lg:px-20 px-5">
-        <div className="grid grid-cols-3 auto-cols-min gap-2 w-fit h-fit mx-auto mb-8">
+        <div className="grid grid-cols-3 auto-cols-min gap-2 w-fit h-fit mx-auto mb-8 font-bold font-mono">
           <h1 className="text-5xl uppercase leading-tight col-span-2">
             Elevate
           </h1>
@@ -20,24 +20,31 @@ const HowItWorks = () => {
         </p>
         <div className="w-fit mx-auto grid grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 gap-8 lg:gap-28 auto-cols-min mb-28">
           <div className="flex flex-col items-center w-80">
-          <LottieAnimation animationData={Notepad} size={126} />
+            <LottieAnimation
+              animationData={Notepad}
+              size={126}
+            />
             <p className="font-sans text-center">
-              With our cutting-edge designs, you&apos;ll be sure to elevate your
-              online presence and dominate your competition.
+              Our team is ready and eager to hear about your unique needs.
             </p>
           </div>
           <div className="flex flex-col items-center w-80">
-          <LottieAnimation animationData={Pendraw} size={126} />
+            <LottieAnimation
+              animationData={Pendraw}
+              size={126}
+            />
             <p className="font-sans text-center">
-              With our cutting-edge designs, you&apos;ll be sure to elevate your
-              online presence and dominate your competition.
+              Collaborative design process, iterating to perfection, exceeding
+              expectations.
             </p>
           </div>
           <div className="flex flex-col items-center w-80">
-          <LottieAnimation animationData={Growth} size={126} />
+            <LottieAnimation
+              animationData={Growth}
+              size={126}
+            />
             <p className="font-sans text-center">
-              With our cutting-edge designs, you&apos;ll be sure to elevate your
-              online presence and dominate your competition.
+              Expertise and support for business growth and maintenance.
             </p>
           </div>
         </div>

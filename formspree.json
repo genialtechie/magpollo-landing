@@ -1,0 +1,20 @@
+{
+  "forms": {
+    "contact": {
+      "name": "Let's Build",
+      "fields": {
+        "email": { "type": "email", "required": true },
+        "name": { "type": "text", "required": true }
+      },
+      "actions": [
+        { "type": "email", "to": "salesteam@magpollo.com" },
+        {
+          "type": "autoresponse",
+          "fromName": "Magpollo Team",
+          "subject": "Enquiry Received",
+          "message": "We received your enquiry! We'll be in touch soon."
+        }
+      ]
+    }
+  }
+}

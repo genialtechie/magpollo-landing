@@ -1,4 +1,19 @@
-const LetsBuildForm = ({ hide }) => {
+import { useForm, ValidationError } from '@formspree/react';
+
+const LetsBuildForm = ({ hide, services, file }) => {
+  const [state, handleSubmit] = useForm('mjvdgwzb', {
+    data: {
+      services: function () {
+        let message = "I'm interested in: ";
+        services.forEach((service) => {
+          message += service + ', ';
+        });
+        return message;
+      },
+      file: file,
+    },
+  });
+
   return (
     <div className="md:w-9/12 mx-auto h-fit">
       <div className="flex flex-row justify-between items-center">
@@ -6,7 +21,7 @@ const LetsBuildForm = ({ hide }) => {
           Let&apos;s Build
         </h1>
         <div
-          className="cursor-pointer text-lg font-sans hover:text-red"
+          className="cursor-pointer text-lg font-sans hover:text-red hover:underline"
           onClick={hide}
         >
           Go back
@@ -25,6 +40,7 @@ const LetsBuildForm = ({ hide }) => {
       <h1 className="text-gray-500 font-sans text-xl font-bold mb-5">
         Your Info
       </h1>
+      <form onSubmit={handleSubmit}></form>
     </div>
   );
 };
