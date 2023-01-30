@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lightbulb, Target, Button, Contact } from '../components';
+import { Lightbulb, Target, MailButton } from '../components';
 import LottieAnimation from '../components/ui/LottieAnimation';
 
 const GetStarted = () => {
@@ -31,7 +31,7 @@ const GetStarted = () => {
           </p>
         </div>
       </div>
-      <Button className="mx-auto mt-10">GET STARTED</Button>
+      <MailButton className="mx-auto mt-10">GET STARTED</MailButton>
     </div>
   );
 };

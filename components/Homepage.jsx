@@ -1,4 +1,4 @@
-import { Button, SmallCard } from '../components';
+import { MailButton, SmallCard } from '../components';
 import archivo from '../assets/img/archivo.png';
 import loudr from '../assets/img/loudr.png';
 import refinable from '../assets/img/refinable.png';
@@ -18,12 +18,7 @@ const Homepage = () => {
         <p className="text-center font-sans text-black mb-8 px-">
           The key to elevating your digital game and standing out
         </p>
-        <Button
-          href="/lets-build"
-          className="mx-auto"
-        >
-          Let&apos;s Build
-        </Button>
+        <MailButton className="mx-auto">Let&apos;s Build</MailButton>
       </div>
       <div className="mx-auto w-full h-fit grid grid-cols-2 lg:grid-cols-4 grid-rows-1 gap-5 mb-24 overflow-hidden">
         <SmallCard
