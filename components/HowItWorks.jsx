@@ -6,8 +6,8 @@ const HowItWorks = () => {
   return (
     <div className="bg-white w-full h-full">
       <div className="py-20 lg:px-20 px-5">
-        <div className="grid grid-cols-3 auto-cols-min gap-2 w-fit h-fit mx-auto mb-8 font-bold font-mono">
-          <h1 className="text-5xl uppercase leading-tight col-span-2">
+        <div className="flex flex-row items-center w-fit h-fit mx-auto mb-8 font-bold font-mono">
+          <h1 className="lg:text-5xl text-4xl uppercase leading-tight mr-2">
             Elevate
           </h1>
           <h1 className="text-xl uppercase text-red">

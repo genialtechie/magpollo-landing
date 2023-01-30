@@ -8,7 +8,7 @@ const Homepage = () => {
   return (
     <div className="bg-cream h-full w-full overflow-hidden">
       <div className="lg:w-1/3 mx-auto py-20 px-5 lg:px-0">
-        <h1 className="lg:text-6xl text-5xl uppercase font-bold font-mono text-center mb-8 leading-snug lg:leading-tight">
+        <h1 className="lg:text-6xl text-4xl uppercase font-bold font-mono text-center mb-8 leading-snug lg:leading-tight">
           <span className="text-black">Ascend to</span>
           <br />
           <span className="text-red">
