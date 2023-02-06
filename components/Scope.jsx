@@ -36,7 +36,7 @@ const Scope = () => {
       <p className="font-sans mt-4">
         We are your go-to source for comprehensive digital solutions
       </p>
-      <div className="h-fit w-3/4 hidden md:flex justify-evenly flex-row flex-wrap my-10 content-around mx-auto">
+      <div className="h-fit w-3/4 hidden md:flex flex-row justify-evenly flex-wrap my-10 content-around mx-auto">
         {services.map((service) => (
           <FauxButton
             key={service.id}
