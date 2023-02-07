@@ -6,10 +6,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Magpollo</title>
+        <title>Magpollo - E-Strategy, Design & Engineering</title>
         <meta
           name="description"
-          content="E-Strategy, Design & Engineering"
+          content="Magpollo is an organization that specializes in strategizing and engineering solutions for the web."
         />
         <meta
           name="keywords"

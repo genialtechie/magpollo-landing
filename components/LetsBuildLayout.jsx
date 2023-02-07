@@ -10,7 +10,7 @@ const LetsBuildLayout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Magpollo</title>
+        <title>Magpollo - Let&#39;s Build</title>
         <meta
           name="description"
           content="E-Strategy, Design & Engineering"
