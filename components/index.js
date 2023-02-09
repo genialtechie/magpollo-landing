@@ -12,6 +12,7 @@ export { default as LetsBuildForm } from './LetsBuildForm';
 export { default as Button } from './ui/Button';
 export { default as ButtonDisabled } from './ui/ButtonDisabled';
 export { default as MailButton } from './ui/MailButton';
+export { default as ButtonWhite } from './ui/ButtonWhite';
 export { default as SmallCard } from './ui/SmallCard';
 export { default as ServicesCard } from './ui/ServicesCard';
 export { default as FauxButton } from './ui/FauxButton';

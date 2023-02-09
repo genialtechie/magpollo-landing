@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lightbulb, Target, MailButton } from '../components';
+import { Lightbulb, Target, ButtonWhite } from '../components';
 import LottieAnimation from '../components/ui/LottieAnimation';
 
 const GetStarted = () => {
@@ -31,7 +31,12 @@ const GetStarted = () => {
           </p>
         </div>
       </div>
-      <MailButton className="mx-auto mt-10">GET STARTED</MailButton>
+      <ButtonWhite
+        href="mailto:salesteam@magpollo.com"
+        className="mx-auto mt-10"
+      >
+        GET STARTED
+      </ButtonWhite>
     </div>
   );
 };
