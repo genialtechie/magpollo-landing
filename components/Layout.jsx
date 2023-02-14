@@ -1,6 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
 import Head from 'next/head';
+import Script from 'next/script';
 
 const Layout = ({ children }) => {
   return (
@@ -19,6 +20,16 @@ const Layout = ({ children }) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-KXKBE1421C"
+        ></Script>
+        <Script>
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-KXKBE1421C');`}
+        </Script>
         <link
           rel="icon"
           href="/favicon.ico"
