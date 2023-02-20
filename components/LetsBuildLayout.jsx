@@ -40,7 +40,7 @@ const LetsBuildLayout = ({ children }) => {
         </Link>
       </nav>
       <main>{children}</main>
-      <div className="bg-red p-20 flex flex-row justify-around mx-auto ">
+      <div className="bg-red p-20 flex flex-row justify-around mx-auto px-5">
         <div className="font-sans text-white">
           <h1 className="text-2xl font-bold mb-3">
             Don&apos;t want to fill a form?

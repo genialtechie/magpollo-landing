@@ -25,7 +25,9 @@ export default function LetsBuild() {
   return (
     <>
       <div
-        className={`${showForm ? 'hidden' : 'block'} md:w-9/12 mx-auto h-fit`}
+        className={`${
+          showForm ? 'hidden' : 'block'
+        } px-5 md:w-9/12 mx-auto h-fit`}
       >
         <h1 className="text-red text-5xl font-mono uppercase font-bold mb-10">
           Let&apos;s Build

@@ -32,7 +32,7 @@ const GetStarted = () => {
         </div>
       </div>
       <ButtonWhite
-        href="mailto:salesteam@magpollo.com"
+        href="/lets-build"
         className="mx-auto mt-10"
       >
         GET STARTED

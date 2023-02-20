@@ -4,17 +4,13 @@
       "name": "Let's Build",
       "fields": {
         "email": { "type": "email", "required": true },
-        "name": { "type": "text", "required": true }
+        "name": { "type": "text", "required": true },
+        "message": { "type": "text" },
+        "phone": { "type": "text", "required": true },
+        "company": { "type": "text" },
+        "website": { "type": "text" }
       },
-      "actions": [
-        { "type": "email", "to": "salesteam@magpollo.com" },
-        {
-          "type": "autoresponse",
-          "fromName": "Magpollo Team",
-          "subject": "Enquiry Received",
-          "message": "We received your enquiry! We'll be in touch soon."
-        }
-      ]
+      "actions": [{ "type": "email", "to": "salesteam@magpollo.com" }]
     }
   }
 }
