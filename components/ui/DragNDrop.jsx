@@ -20,7 +20,7 @@ const DragNDrop = ({ handleChange }) => {
       handleChange={handleChange}
       types={fileTypes}
     >
-      <div className="w-full h-40 bg-red/5 mb-5 rounded-lg border-2 border-dashed border-[#666666] flex flex-col items-center justify-center font-sans text-lg cursor-pointer">
+      <div className="w-fit px-5 md:w-full h-40 bg-red/5 mb-5 rounded-lg border-2 border-dashed border-[#666666] flex flex-col items-center justify-center font-sans text-lg cursor-pointer">
         <p className="mb-2">
           Drag & drop files or{' '}
           <span className="text-red underline">Browse</span>

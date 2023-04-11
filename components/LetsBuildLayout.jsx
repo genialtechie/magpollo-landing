@@ -40,19 +40,19 @@ const LetsBuildLayout = ({ children }) => {
         </Link>
       </nav>
       <main>{children}</main>
-      <div className="bg-red p-20 flex flex-row justify-around mx-auto px-5">
+      <div className="bg-red p-20 flex flex-row md:justify-around mx-auto px-10 overflow-hidden">
         <div className="font-sans text-white">
-          <h1 className="text-2xl font-bold mb-3">
+          <h1 className="text-xl md:text-2xl font-bold mb-3">
             Don&apos;t want to fill a form?
           </h1>
-          <p className="text-2xl mb-3">Get in touch</p>
+          <p className="text-xl md:text-2xl mb-3">Get in touch</p>
           <a
             href="mailto:salesteam@magpollo.com"
-            className="hover:underline transition-all duration-300 ease-in-out"
+            className="md:text-md text-sm hover:underline transition-all duration-300 ease-in-out"
           >
             salesteam@magpollo.com
           </a>
-          <p className="mt-1">
+          <p className="md:text-md text-sm mt-1">
             Call{' '}
             <a
               href="tel:+14705492477"
