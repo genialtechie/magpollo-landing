@@ -18,6 +18,7 @@ export default async function sendMail(props) {
   const message = {
     to: 'salesteam@magpollo.com',
     subject: `New Service Request from ${props.name}`,
+    cc: 'oyudoxyz@gmail.com, only1hbo@icloud.com, roufaym@gmail.com',
     html: emailHtml,
     attachments: [
       {
