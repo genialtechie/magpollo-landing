@@ -1,22 +1,32 @@
 import { useState } from 'react';
 import {
   ServicesCard,
-  DragNDrop,
   ButtonDisabled,
   Button,
   LetsBuildForm,
   LetsBuildLayout,
 } from '../components';
 import { services } from '../utils/services';
+import { FileUploader } from 'react-drag-drop-files';
+
+const fileTypes = [
+  'JPG',
+  'PNG',
+  'GIF',
+  'MP4',
+  'PDF',
+  'DOC',
+  'DOCX',
+  'PPT',
+  'PPTX',
+  'PSD',
+  'AI',
+];
 
 export default function LetsBuild() {
   const [selectedServices, setSelectedServices] = useState([]);
   const [file, setFile] = useState(null);
   const [showForm, setShowForm] = useState(false);
-
-  function handleFileChange(file) {
-    setFile(file);
-  }
 
   function handlePageToggle() {
     showForm ? setShowForm(false) : setShowForm(true);
@@ -67,8 +77,34 @@ export default function LetsBuild() {
         <h1 className="text-gray-500 font-sans text-xl font-bold mb-5">
           Upload relevant file
         </h1>
-        <DragNDrop handleChange={handleFileChange} />
-        {selectedServices.length > 0 ? (
+        <FileUploader
+          handleChange={(file) => {
+            setFile(file);
+          }}
+          types={fileTypes}
+        >
+          <div className="w-fit px-5 md:w-full h-40 bg-red/5 mb-5 rounded-lg border-2 border-dashed border-[#666666] flex flex-col items-center justify-center font-sans text-lg cursor-pointer">
+            {file ? (
+              <>
+                <h1 className="text-red font-bold mb-2">File Uploaded</h1>
+                <p className="mb-1">{file.name}</p>
+                <p className="text-gray-500">{file.type}</p>
+              </>
+            ) : (
+              <>
+                <p className="mb-2">
+                  Drag & drop files or{' '}
+                  <span className="text-red underline">Browse</span>
+                </p>
+                <p className="text-gray-500">
+                  Supported formats: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word,
+                  PPT
+                </p>
+              </>
+            )}
+          </div>
+        </FileUploader>
+        {selectedServices.length > 0 || file ? (
           <Button
             className="my-14 mx-auto"
             onClick={(e) => {

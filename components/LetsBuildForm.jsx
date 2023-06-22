@@ -1,33 +1,25 @@
-import { useForm, ValidationError } from '@formspree/react';
+import { useFormik } from 'formik';
 import { ButtonDisabled } from '../components';
-import { useState } from 'react';
-import Link from 'next/link';
+import { contactSchema } from '../utils/validateInputs';
+import sendMail from '../utils/sendMail';
 
 const LetsBuildForm = ({ hide, services, file }) => {
-  const [state, handleSubmit] = useForm('contact', {
-    data: {
-      services: function () {
-        let message = "I'm interested in: ";
-        services.forEach((service) => {
-          message += service + ', ';
-        });
-        return message;
-      },
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      phone: '',
+      company: '',
+      website: '',
+      message: '',
     },
+    validationSchema: contactSchema,
+    onSubmit: async (values) => {
+      const data = { ...values, services, file };
+      const success = await sendMail(data);
+    },
+    validateOnChange: true,
   });
-  const [values, setValues] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    website: '',
-    message: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setValues({ ...values, [name]: value });
-  };
 
   return (
     <div className="px-5 md:w-9/12 mx-auto h-fit">
@@ -57,93 +49,70 @@ const LetsBuildForm = ({ hide, services, file }) => {
       </h1>
       <form
         id="contact-form"
-        onSubmit={handleSubmit}
+        onSubmit={formik.handleSubmit}
       >
-        <ValidationError
-          prefix="Name"
-          field="name"
-          errors={state.errors}
-        />
+        {formik.touched.name && formik.errors.name ? (
+          <div className="text-red mb-2 text-xs">{formik.errors.name}</div>
+        ) : null}
         <input
           type="text"
+          required
           placeholder="Your Name *"
-          name="name"
-          id="customer_name"
-          value={values.name}
-          onChange={handleChange}
+          id="name"
+          {...formik.getFieldProps('name')}
           className="w-full h-10 border-b-[2px] border-0 focus:ring-0 border-gray-400 p-2 bg-inherit placeholder:[#666666] text-sm font-sans placeholder:font-sans placeholder:font-thin placeholder:text-sm outline-none focus:border-black mb-5"
         />
-        <ValidationError
-          prefix="Email"
-          field="email"
-          errors={state.errors}
-        />
+        {formik.touched.email && formik.errors.email ? (
+          <div className="text-red mb-2 text-xs">{formik.errors.email}</div>
+        ) : null}
         <input
           type="text"
           placeholder="Email *"
-          name="email"
-          id="customer_email"
-          value={values.email}
-          onChange={handleChange}
+          id="email"
+          {...formik.getFieldProps('email')}
           className="w-full h-10 border-b-[2px] border-0 focus:ring-0 border-gray-400 p-2 bg-inherit placeholder:[#666666] text-sm font-sans placeholder:font-sans placeholder:font-thin placeholder:text-sm outline-none focus:border-black mb-5"
         />
-        <ValidationError
-          prefix="Phone"
-          field="phone"
-          errors={state.errors}
-        />
+        {formik.touched.phone && formik.errors.phone ? (
+          <div className="text-red mb-2 text-xs">{formik.errors.phone}</div>
+        ) : null}
         <input
           type="text"
-          placeholder="Phone *"
-          name="phone"
-          id="customer_phone"
-          value={values.phone}
-          onChange={handleChange}
+          placeholder="Phone "
+          id="phone"
+          {...formik.getFieldProps('phone')}
           className="w-full h-10 border-b-[2px] border-0 focus:ring-0 border-gray-400 p-2 bg-inherit placeholder:[#666666] text-sm font-sans placeholder:font-sans placeholder:font-thin placeholder:text-sm outline-none focus:border-black mb-5"
         />
-        <ValidationError
-          prefix="Company"
-          field="company"
-          errors={state.errors}
-        />
+        {formik.touched.company && formik.errors.company ? (
+          <div className="text-red mb-2 text-xs">{formik.errors.company}</div>
+        ) : null}
         <input
           type="text"
           placeholder="Company"
-          name="company"
-          id="customer_company"
-          value={values.company}
-          onChange={handleChange}
+          id="company"
+          {...formik.getFieldProps('company')}
           className="w-full h-10 border-b-[2px] border-0 focus:ring-0 border-gray-400 p-2 bg-inherit placeholder:[#666666] text-sm font-sans placeholder:font-sans placeholder:font-thin placeholder:text-sm outline-none focus:border-black mb-5"
         />
-        <ValidationError
-          prefix="Website"
-          field="website"
-          errors={state.errors}
-        />
+        {formik.touched.website && formik.errors.website ? (
+          <div className="text-red mb-2 text-xs">{formik.errors.website}</div>
+        ) : null}
         <input
           type="text"
           placeholder="Website"
-          name="website"
-          id="customer_website"
-          value={values.website}
-          onChange={handleChange}
+          id="website"
+          {...formik.getFieldProps('website')}
           className="w-full h-10 border-b-[2px] border-0 focus:ring-0 border-gray-400 p-2 bg-inherit placeholder:[#666666] text-sm font-sans placeholder:font-sans placeholder:font-thin placeholder:text-sm outline-none focus:border-black mb-5"
         />
-        <ValidationError
-          prefix="Message"
-          field="message"
-          errors={state.errors}
-        />
+        {formik.touched.message && formik.errors.message ? (
+          <div className="text-red mb-2 text-xs">{formik.errors.message}</div>
+        ) : null}
         <textarea
           type="text"
           placeholder="Anything you'd like us to know?"
-          name="message"
-          id="customer_message"
-          value={values.message}
-          onChange={handleChange}
+          id="message"
+          {...formik.getFieldProps('message')}
           className="w-full h-40 border-b-[2px] border-0 focus:ring-0 border-gray-400 p-2 bg-inherit placeholder:[#666666] text-sm font-sans placeholder:font-sans placeholder:font-thin placeholder:text-sm outline-none focus:border-black mb-5"
         />
-        {state.submitting || !values.name || !values.email || !values.phone ? (
+        {formik.values.name === '' || formik.values.email === '' ? (
           <ButtonDisabled className="my-14 mx-auto">Submit</ButtonDisabled>
         ) : (
           <div className={'mx-auto my-14 relative w-fit h-fit group'}>
@@ -167,7 +136,7 @@ const LetsBuildForm = ({ hide, services, file }) => {
           </div>
         )}
       </form>
-      {state.succeeded && (
+      {/* {state.succeeded && (
         <div className="text-center text-gray-500">
           <h2 className="font-bold mb-4">Thanks for your interest!</h2>
           <p className="text-sm">
@@ -175,7 +144,7 @@ const LetsBuildForm = ({ hide, services, file }) => {
             to go back to the homepage.
           </p>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
