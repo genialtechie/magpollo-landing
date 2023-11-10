@@ -9,16 +9,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-jakarta)', ...fontFamily.sans],
-        mono: ['var(--font-hack)', ...fontFamily.mono],
+        sans: ['var(--font-jakarta)'],
+        mono: ['var(--font-hack)'],
       },
       colors: {
         cream: '#FFFCE4',
         red: '#CE4257',
         black: '#040F0F',
-        darkRed:'#B93B4E',
+        darkRed: '#B93B4E',
         lightBlue: '#EEF6FF',
-        white:'#fff'
+        white: '#fff',
       },
       content: {
         quote: 'url("../public/quote.svg")',

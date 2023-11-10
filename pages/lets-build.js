@@ -23,6 +23,8 @@ const fileTypes = [
   'AI',
 ];
 
+const servicesWithOther = [...services, { title: 'Other', id: 'other' }];
+
 export default function LetsBuild() {
   const [selectedServices, setSelectedServices] = useState([]);
   const [file, setFile] = useState(null);
@@ -55,7 +57,7 @@ export default function LetsBuild() {
           I&apos;m interested in..
         </h1>
         <div className="flex flex-row flex-wrap mb-16">
-          {services.map((service) => (
+          {servicesWithOther.map((service) => (
             <div
               key={service.id}
               onClick={() => {
