@@ -20,13 +20,18 @@ export default async function sendMail(props) {
     subject: `New Service Request from ${props.name}`,
     cc: 'oyudoxyz@gmail.com, only1hbo@icloud.com, roufaym@gmail.com',
     html: emailHtml,
-    attachments: [
+  };
+
+  // attach file if it exists
+  if (props.file) {
+    const file = await readFile(props.file);
+    message.attachments = [
       {
         filename: props.file.name,
         path: await readFile(props.file),
       },
-    ],
-  };
+    ];
+  }
 
   // send email
   try {
