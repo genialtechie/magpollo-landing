@@ -24,7 +24,6 @@ export default async function sendMail(props) {
 
   // attach file if it exists
   if (props.file) {
-    const file = await readFile(props.file);
     message.attachments = [
       {
         filename: props.file.name,
