@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-jakarta)'],
-        mono: ['var(--font-hack)'],
+        mono: ['var(--font-jockey)'],
       },
       colors: {
         cream: '#FFFCE4',
