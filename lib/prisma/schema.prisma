@@ -1,0 +1,57 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id          String    @id @default(cuid()) @map("_id")
+  email       String    @unique
+  name        String?
+  providerId  String?   @unique
+  isSuscribed Boolean   @default(false)
+  stripeId    String?
+  createdAt   DateTime  @default(now())
+  cars        Car[]
+  chats       Chat[]
+  Message     Message[]
+}
+
+model Car {
+  id           String   @id @default(cuid()) @map("_id")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  make         String
+  model        String
+  year         Int
+  vin          String?  @unique
+  mileage      Int?
+  transmission String?
+  engine       String?
+  ownerId      String
+  owner        User     @relation(fields: [ownerId], references: [id])
+}
+
+model Chat {
+  id        String    @id @default(cuid()) @map("_id")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  ownerId   String
+  owner     User      @relation(fields: [ownerId], references: [id])
+  messages  Message[]
+}
+
+model Message {
+  id        String   @id @default(cuid()) @map("_id")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  chatId    String
+  chat      Chat     @relation(fields: [chatId], references: [id])
+  role      String
+  content   String
+  senderId  String?
+  sender    User?    @relation(fields: [senderId], references: [id])
+}

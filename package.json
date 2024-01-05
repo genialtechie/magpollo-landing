@@ -1,0 +1,48 @@
+{
+  "name": "motormentor",
+  "version": "0.0.1",
+  "private": true,
+  "prisma": {
+    "seed": "node lib/prisma/seed.js",
+    "schema": "lib/prisma/schema.prisma"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@auth0/nextjs-auth0": "^2.6.3",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.6",
+    "@prisma/client": "^4.16.1",
+    "ai": "2.1.8",
+    "formik": "^2.4.2",
+    "framer-motion": "^10.15.0",
+    "lottie-react": "^2.4.0",
+    "micro": "^10.0.1",
+    "next": "^13.5.6",
+    "openai-edge": "^0.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.5.2",
+    "stripe": "^12.13.0",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.12",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^13.5.6",
+    "postcss": "^8.4.23",
+    "prisma": "^4.16.1",
+    "tailwindcss": "^3.3.2",
+    "typescript": "5.0.4"
+  }
+}
