@@ -11,7 +11,7 @@ const GetStarted = () => {
       </p>
 
       <div className="flex flex-row gap-5  place-content-center mt-6 mx-100 align-center whitespace-normal">
-        <div className="bg-darkRed w-64 h-72 align-middle flex flex-col justify-center">
+        <div className="bg-darkRed w-64 h-72 items-center flex flex-col justify-center">
           <LottieAnimation
             animationData={Lightbulb}
             size={126}
@@ -21,7 +21,7 @@ const GetStarted = () => {
             Let us know you and your digital needs
           </p>
         </div>
-        <div className="bg-darkRed w-64 h-72 align-middle flex flex-col justify-center">
+        <div className="bg-darkRed w-64 h-72 items-center flex flex-col justify-center">
           <LottieAnimation
             animationData={Target}
             size={126}
